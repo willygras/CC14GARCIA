@@ -1,143 +1,173 @@
- William Marx S. Garcia  JavaScript Programming Exercises
+// Part 1: Basic Exercises (Variables and Output)
+// 1) Hello, JavaScript
+console.log("Hello, World! \nWelcome to JavaScript Programming!");
 
- Part 1 Basic Exercises (Variables and Output)
- 1) Hello, JavaScript
-console.log(Hello, World! nWelcome to JavaScript Programming!);
+// 2) Hello, JavaScript
+var name = "William Garcia";
+var age = "20";
+var favLang="JavaScript";
 
- 2) Hello, JavaScript
-var name = William Garcia;
-var age = 20;
-var favLang=JavaScript;
+console.log(`My name is ${name}.\nI am ${age} years old.\nMy favorite programming language is ${favLang}.`);
 
-console.log(`My name is ${name}.nI am ${age} years old.My favorite programming language is ${favLang}.`);
+// 3) Simple Calculator
+let num1= prompt("Please enter number 1:");
+let num2= prompt("Please enter number 2:"); 
+console.log("Sum: " + (num1 + num2) + "\nDifference: " + (num1 - num2) + "\nProduct: " + (num1 * num2) + "\nQuotient: " + (num1 / num2));
 
- 3) Simple Calculator
-let num1= prompt(Please enter number 1);
-let num2= prompt(Please enter number 2); 
-console.log(Sum  + (num1 + num2) + nDifference  + (num1 - num2) + nProduct  + (num1  num2) + nQuotient  + (num1  num2));
-
-Or
-
-num1 = 10;
-num2 = 5;
-
-sum = num1 + num2;
-difference = num1 - num2;
-product = num1  num2;
-quotient = num1  num2;
-
-console.log(Sum  + sum);
-console.log(Difference  + difference);
-console.log(Product  + product);
-console.log(Quotient  + quotient);
-
- Part 2 Conditional Statements
- 4. Even or Odd Checker
-let num = prompt(Please enter number);
+VM437:3 Hello, World! 
+Welcome to JavaScript Programming!
+VM437:10 My name is William Garcia.
+I am 20 years old.
+My favorite programming language is JavaScript.
+VM437:15 Sum: 105
+Difference: 5
+Product: 50
+Quotient: 2
+undefined
+// Part 2: Conditional Statements
+// 4. Even or Odd Checker
+let num = prompt("Please enter number:");
 
 if (num % 2 == 0) {
-    console.log(Output The number is Even);
+    console.log("Output: The number is Even");
 } else {
-    console.log(Output The number is Odd); 
+    console.log("Output: The number is Odd"); 
 }
 
- 5. Voting Eligibility
-let age= prompt(Please enter age);
-if (age = 18) {
-    console.log(You are eligible to vote);
+// 5. Voting Eligibility
+let age1= prompt("Please enter age:");
+if (age1 >= 18) {
+    console.log("You are eligible to vote");
 } else {
-    console.log(You are not eligible to vote.); 
+    console.log("You are not eligible to vote."); 
 }
 
- 6. Grade Evaluator
-let grade= prompt(Please enter grade);
-if (grade = 90) {
-    console.log(Excellent);
-} else if (grade = 80) {
-    console.log(Very Good.); 
-} else if (grade = 70) {
-    console.log(Good.); 
-} else if (grade = 60) {
-    console.log(Fair.); 
+// 6. Grade Evaluator
+let grade= prompt("Please enter grade:");
+if (grade >= 90) {
+    console.log("Excellent");
+} else if (grade >= 80) {
+    console.log("Very Good."); 
+} else if (grade >= 70) {
+    console.log("Good."); 
+} else if (grade >= 60) {
+    console.log("Fair."); 
 } else {
-    console.log(Failed.); 
+    console.log("Failed."); 
 }
 
 
 let i;
-if (i=10){
+if (i>=10){
 	console.log(i+1)
 } else {
 	
 }
 
-PART 3 LOOPS
- 7. Print Numbers
-for (let i = 1; i = 10; i++) {
+
+VM442:6 Output: The number is Even
+VM442:14 You are eligible to vote
+VM442:24 Very Good.
+undefined
+//PART 3: LOOPS
+// 7. Print Numbers
+for (let i = 1; i <= 10; i++) {
   console.log(i);
 }
 
-8 
-let num= prompt(Please enter a number);
-for (let i = 1; i = 10; i++) {
-  console.log(`${num} x ${i} = ${numi}`);
+//8 
+let num= prompt("Please enter a number:");
+for (let i = 1; i <= 10; i++) {
+  console.log(`${num} x ${i} = ${num*i}`);
 }
 
-9. Sum of Numbers
+//9. Sum of Numbers
 let sum = 0;
-for (let i = 1; i = 100; i++) { 
+for (let i = 1; i <= 100; i++) { 
 sum += i;
 }
 console.log(`The sum is ${sum}`);
 
- Part 4 Functions
-10. Greeting Function
+VM448:4 1
+VM448:4 2
+VM448:4 3
+VM448:4 4
+VM448:4 5
+VM448:4 6
+VM448:4 7
+VM448:4 8
+VM448:4 9
+VM448:4 10
+VM448:10 5 x 1 = 5
+VM448:10 5 x 2 = 10
+VM448:10 5 x 3 = 15
+VM448:10 5 x 4 = 20
+VM448:10 5 x 5 = 25
+VM448:10 5 x 6 = 30
+VM448:10 5 x 7 = 35
+VM448:10 5 x 8 = 40
+VM448:10 5 x 9 = 45
+VM448:10 5 x 10 = 50
+VM448:18 The sum is 5050
+undefined
+// Part 4: Functions
+//10. Greeting Function
 function greetUser(name) {
   return `Hello ${name}! Welcome to JavaScript.`;
 }
-console.log(greetUser(Maria));
+console.log(greetUser("Maria"));
 
- 11. Area of a Rectangle
+// 11. Area of a Rectangle
 function calculateArea(length, width) {
-  return length  width;
+  return length * width;
 }
-console.log(`Area ${calculateArea(10, 5)}`);
+console.log(`Area: ${calculateArea(10, 5)}`);
 
- 12.Largest of Three Numbers
+// 12.Largest of Three Numbers
 function findLargest(a, b, c) {
   return Math.max(a, b, c);
 }
 console.log(findLargest(5, 9, 3));
 
- Part 5 Arrays
- 13. Display Array Elements
-fruits = [Apple, Banana, Mango, Orange, Grapes];
-fruits.forEach(fruit = console.log(fruit));
+VM466:6 Hello Maria! Welcome to JavaScript.
+VM466:12 Area: 50
+VM466:18 9
+undefined
+// Part 5: Arrays
+// 13. Display Array Elements
+const fruits = ["Apple", "Banana", "Mango", "Orange", "Grapes"];
+fruits.forEach(fruit => console.log(fruit));
 
- 14. Largest Number in Array
+// 14. Largest Number in Array
 const arr = [10, 45, 3, 67, 22];
 const largest = Math.max(...arr);
-console.log(`Largest number ${largest}`);
+console.log(`Largest number: ${largest}`);
 
- 15. Reverse an Array
-const arr = [1,2,3,4,5];
-const reversed = [...arr].reverse();
-console.log(Original, arr.join(,));
-console.log(Reversed, reversed.join(,));
+// 15. Reverse an Array
 
- 16. Palindrome Checker
+// 16. Palindrome Checker
 function isPalindrome(word) {
-  const rev = word.split().reverse().join();
+  const rev = word.split("").reverse().join("");
   return word === rev;
 }
-console.log(isPalindrome(racecar));  true
+console.log(isPalindrome("racecar")); // true
 
-17. Number Guessing Game
-const secret = Math.floor(Math.random()  10) + 1;
-const guess = parseInt(prompt(Guess 1-10));
+//17. Number Guessing Game
+const secret = Math.floor(Math.random() * 10) + 1;
+const guess = parseInt(prompt("Guess 1-10:"));
 if (guess === secret) {
-  console.log(Correct!);
+  console.log("Correct!");
 } else {
   console.log(`Try Again! It was ${secret}`);
 }
 
+
+VM471:4 Apple
+VM471:4 Banana
+VM471:4 Mango
+VM471:4 Orange
+VM471:4 Grapes
+VM471:9 Largest number: 67
+VM471:18 true
+VM471:24 Correct!
+undefined
